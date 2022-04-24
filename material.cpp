@@ -16,6 +16,7 @@ int main(){
 #include <cmath>
 #include <algorithm>
 #include <string>
+#include <unordered_set>
 using namespace std;
 
 int main(){
@@ -45,6 +46,9 @@ int main(){
     for(int i=0; i<N; i++){
         cin >> vec.at(i);
     }
+
+    // 重複を許さない
+    unordered_set<int> s; 
 
     // ソート
     sort(vec.begin(), vec.end());
