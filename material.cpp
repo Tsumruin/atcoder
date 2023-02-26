@@ -16,6 +16,7 @@ int main(){
 #include <cmath>
 #include <algorithm>
 #include <string>
+#include <set>
 #include <unordered_set>
 using namespace std;
 
@@ -79,4 +80,17 @@ int main(){
     
     cout << "一行目 " << s << endl;
     cout << "二行目 " << t << endl;
+
+
+    set<pair<long long, long long>> used;
+
+    long long nowX = 0;
+    long long nowY = 0;
+    used.insert({nowX, nowY});
+
+    auto result = used.insert({nowX, nowY});
+
+    if(!result.second){
+        cout << "重複！" << endl;
+    }   
 }
