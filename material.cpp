@@ -60,10 +60,30 @@ int main(){
 
     // ソート
     sort(vec.begin(), vec.end());
+    sort(N.begin(), N.end(), greater<int>());
 
     // int型の2次元配列(3×4要素の)の宣言
     vector<vector<int>> data(3, vector<int>(4));
     data.at(i).at(j);
+
+
+    //bit全探索
+    for (int bit = 0; bit < (1 << digit); ++bit) {
+        // bit の表す集合を求める
+        long long l = 0, r = 0;
+
+        for (int i = 0; i < digit; ++i){
+            if (bit & (1 << i)){
+                l = 10 * l + N.at(i) - '0';
+            }
+            else{
+                r = 10 * r + N.at(i) - '0';
+            }
+        }
+
+        maximum = max(maximum, l * r);
+
+    }
 
     // N × (3 × 3)要素の配列を宣言
     vector<vector<vector<char>>> data(N, vector<vector<char>>(3, vector<char>(3)));
