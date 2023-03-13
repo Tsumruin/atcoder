@@ -10,6 +10,13 @@ int main(){
     return 0;
 }
 
+void printVector(const vector<int>& vec) {
+    for (int value : vec) {
+        cout << value << " ";
+    }
+    cout << endl;
+}
+
 #include <iostream>
 #include <vector>
 #include <iomanip> 

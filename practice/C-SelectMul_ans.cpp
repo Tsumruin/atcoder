@@ -1,7 +1,6 @@
 #include <iostream>
 #include <vector>
 #include <iomanip> 
-#include <functional>
 #include <cmath>
 #include <algorithm>
 #include <string>
@@ -23,29 +22,22 @@ void printVector(const vector<int>& vec) {
 int main(){
     string N; cin >> N;
 
-    long long num = stoll(N);
-    int digit = getDigit(num);
+    sort(N.begin(), N.end());
 
     long long maximum = 0;
 
-    sort(N.begin(), N.end(), greater<int>());
-
-    for (int bit = 0; bit < (1 << digit); ++bit) {
-        // bit の表す集合を求める
-        long long l = 0, r = 0;
-
-        for (int i = 0; i < digit; ++i){
-            if (bit & (1 << i)){
-                l = 10 * l + N.at(i) - '0';
+    do {
+        for(int i=0; i<N.size(); ++i){
+            long long l = 0, r = 0;
+            for(int k=0; k<i; ++k){
+                l = 10 * l + N[k] - '0';
             }
-            else{
-                r = 10 * r + N.at(i) - '0';
+            for(int k=i; k<N.size(); ++k){
+                r = 10 * r + N[k] - '0';
             }
+            maximum = max(maximum, l * r);
         }
-
-        maximum = max(maximum, l * r);
-
-    }
+    }while(next_permutation(N.begin(),N.end()));
 
     cout << maximum << endl;
 
