@@ -121,3 +121,13 @@ int main(){
         cout << "重複！" << endl;
     }   
 }
+
+// a + b がオーバーフローするならtrueを返す
+template <class T> bool overflow_if_add(T a, T b) {
+    return (std::numeric_limits<T>::max() - a) < b;
+}
+
+// a * b がオーバーフローするならtrueを返す
+template <class T> bool overflow_if_mul(T a, T b) {
+    return (std::numeric_limits<T>::max() / a) < b;
+}
