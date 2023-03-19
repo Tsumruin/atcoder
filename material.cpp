@@ -1,4 +1,11 @@
 #include <iostream>
+#include <vector>
+#include <iomanip> 
+#include <cmath>
+#include <algorithm>
+#include <string>
+#include <set>
+#include <unordered_set>
 using namespace std;
 
 int main(){
@@ -24,6 +31,7 @@ void printVector(const vector<int>& vec) {
 #include <algorithm>
 #include <string>
 #include <set>
+#include <deque>
 #include <unordered_set>
 using namespace std;
 
