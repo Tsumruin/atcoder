@@ -24,10 +24,7 @@ void printVector(const vector<int>& vec) {
     cout << endl;
 }
 
-// setの要素取得
-for(auto x : set){
-    cout << x << endl;
-}
+
 
 #include <iostream>
 #include <vector>
@@ -70,6 +67,10 @@ int main(){
 
     // 重複を許さない
     unordered_set<int> s; 
+
+    for(auto x : st) {
+        std::cout << x << "\n";     // 要素を順に表示
+    }
 
     // ソート
     sort(vec.begin(), vec.end());
