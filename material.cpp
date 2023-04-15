@@ -24,6 +24,11 @@ void printVector(const vector<int>& vec) {
     cout << endl;
 }
 
+// setの要素取得
+for(auto x : set){
+    cout << x << endl;
+}
+
 #include <iostream>
 #include <vector>
 #include <iomanip> 
