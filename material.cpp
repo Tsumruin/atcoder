@@ -5,6 +5,7 @@
 #include <algorithm>
 #include <string>
 #include <set>
+#include <map>
 #include <unordered_set>
 using namespace std;
 
@@ -12,7 +13,10 @@ int main(){
 
     int N; cin >> N;
 
-    cout << N << endl;
+    vector<int> A(N);
+    for(int i=0; i<N; ++i){
+        cin >> A.at(i);
+    }
 
     return 0;
 }
@@ -24,6 +28,16 @@ void printVector(const vector<int>& vec) {
     cout << endl;
 }
 
+
+//2次元ベクトルを表示
+void printVec(const vector<vector<int>> v){
+    for(int i=0;i<v.size();i++){
+        for(int j=0;j<v[i].size();j++){
+            cout << v[i][j] << " ";
+        }
+        cout << endl;
+    }
+}
 
 
 #include <iostream>
