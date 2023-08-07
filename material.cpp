@@ -9,6 +9,23 @@
 #include <unordered_set>
 using namespace std;
 
+
+void printVector(const vector<int>& vec) {
+    for (int value : vec) {
+        cout << value << " ";
+    }
+    cout << endl;
+}
+
+void print2ndVector(const vector<vector<bool>> v){
+    for(int i=0;i<v.size();i++){
+        for(int j=0;j<v[i].size();j++){
+            cout << v[i][j] << " ";
+        }
+        cout << endl;
+    }
+}
+
 int main(){
 
     int N; cin >> N;
@@ -21,23 +38,7 @@ int main(){
     return 0;
 }
 
-void printVector(const vector<int>& vec) {
-    for (int value : vec) {
-        cout << value << " ";
-    }
-    cout << endl;
-}
 
-
-//2次元ベクトルを表示
-void printVec(const vector<vector<int>> v){
-    for(int i=0;i<v.size();i++){
-        for(int j=0;j<v[i].size();j++){
-            cout << v[i][j] << " ";
-        }
-        cout << endl;
-    }
-}
 
 
 #include <iostream>
