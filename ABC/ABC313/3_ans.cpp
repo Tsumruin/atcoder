@@ -36,7 +36,7 @@ int main(){
 
     if(max_num - min_num > 1){
         for(int i=0; i<N; ++i){
-            if(A.at(i) < target)
+            if(A.at(i) < target);
         }
     }
 

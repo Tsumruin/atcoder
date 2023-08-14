@@ -52,6 +52,38 @@ int main(){
 #include <unordered_set>
 using namespace std;
 
+struct UnionFind {
+    vector<int> par;
+
+    UnionFind(int N) : par(N){
+        for(int i = 0; i < N; i++) par[i] = i;
+    }
+
+    int root(int x){
+        if (par[x] == x) return x;
+        return par[x] = root(par[x]);
+    }
+
+    /*
+    * Unite two trees
+    * @param x One tree
+    * @param y The other tree
+    * @return create a new tree whose root is y
+    */
+    void unite(int x, int y){
+        int rx = root(x);
+        int ry = root(y);
+        if (rx == ry) return;
+        par[rx] = ry;
+    }
+
+    bool same(int x, int y){
+        int rx = root(x);
+        int ry = root(y);
+        return rx == ry;
+    }
+};
+
 int main(){
     int a, b, c;
     int i, k, j;
