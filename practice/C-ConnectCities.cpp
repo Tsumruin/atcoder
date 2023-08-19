@@ -21,7 +21,7 @@ struct UnionFind {
         return par[x] = root(par[x]);
     }
 
-    /*
+    /*U
     * Unite two trees
     * @param x One tree
     * @param y The other tree
