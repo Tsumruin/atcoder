@@ -5,7 +5,7 @@ class Main {
         */
 
         /* 1. 変数を宣言 */
-        int price = 111; // 税抜き価格
+        int price = 100; // 税抜き価格
         float taxRate = 0.10f; //税率(現在の10%)
 
         /* 2. 変数を処理 */
