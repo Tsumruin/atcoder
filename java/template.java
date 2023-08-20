@@ -1,28 +1,22 @@
 import java.util.*;
 
-
 public class Main {
     public static void main(String[] args) {
-        try(Scanner sc = new Scanner(System.in)) {
-            long N = sc.nextLong();
+        try (Scanner sc = new Scanner(System.in)) {
 
-            long[] A = new long[N];
-            Arrays.setAll(A, i -> sc.nextLong());
+String s = sc.next();
+s = s.replaceAll("0", "");
+
+System.out.println(s.length());
+
+// bitの総orに対して右端から0の数を数える
+int N = sc.nextInt();
+int bit = 0;
+for (int i = 0; i < N; i++) {
+    bit |= sc.nextInt();
+}
+System.out.println(Integer.numberOfTrailingZeros(bit));
+            
         }
-
-        System.out.println("入力桁数：" + digits(N));
-
-        for(long a : A){
-            System.out.print(a + ", ");
-        } 
-    }
-
-    public static int digits(long num) {
-        /*
-         * digits method
-         * @param num Long integer
-         * @return the digits of the number num;
-        */
-        return String.valueOf(num).length();
     }
 }
