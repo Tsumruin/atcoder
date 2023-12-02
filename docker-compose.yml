@@ -10,12 +10,12 @@ services:
       - ./server/ABC:/usr/ABC:cached
     command: /bin/bash
 
-  cpp:
-    build: ./docker/cpp
-    ports:
-      - 3001:3001
-    tty: true
-    volumes:
-      - ./server/cpp:/usr/cpp:cached
-      - ./server/ABC:/usr/ABC:cached
-    command: /bin/bash
+  # cpp:
+  #   build: ./docker/cpp
+  #   ports:
+  #     - 3001:3001
+  #   tty: true
+  #   volumes:
+  #     - ./server/cpp:/usr/cpp:cached
+  #     - ./server/ABC:/usr/ABC:cached
+  #   command: /bin/bash
