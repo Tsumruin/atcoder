@@ -1,15 +1,16 @@
 # atcoder
 Atcoderの勉強&amp;コンテスト参加履歴
 
-## ABCフォルダ
+## 使用言語
+- `C++`: 競プロ参加時～2023年の上期まで主に使用。
+- `Java`: 2023年7月以降に主に使用。
+
+## フォルダ内容
+### ABCフォルダ
 ABCコンテスト参加の際に記述したソースコードを格納  
-(`ファイル名_ans.cpp`は解説を参照したコード)
 
-## practiceフォルダ
-[AtCoder Problems](https://kenkoooo.com/atcoder#/table/)を活用した勉強記録
+### practiceフォルダ
+[AtCoder Problems](https://kenkoooo.com/atcoder#/user/pensuke)を活用した勉強記録
 
-### DP
-動的計画法に特化した問題
-
-### その他
-今後は二分探索や幅優先探索、ダイクストラ法等も勉強していく予定です。
+## 開発環境
+2023年10月以降からdockerを用いたコンテナ開発環境に変更（OpenJDK17）。
